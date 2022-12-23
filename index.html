@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery Tutorial</title>
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <p class="Odd"> This is my body1.</p>
+    <p id="524789"> This is my body2.</p>
+    <p> This is my body3.</p>
+    <p class="Odd"> This is my body4.</p>
+
+</body>
+<script src="jquery-3.6.3.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+
+<script>
+
+    //we must first let the document be loaded then execute our jquery for this we use document.ready
+
+    $(document).ready(function () {
+        // Your jquery code here
+        console.log("Hello World");
+        // $('selector').action()  This is syntak $ means jQuey then selectory and action to be performed
+        $('P').click();// click on p an eg of element selector
+        $('p').click(function () {
+            console.log("Hello again for your click",this);
+            //  $(this).hide(); // this will hide the clicked one
+            //||arly we can use id and class to select
+            $('#id').hide(); // id is unique for element
+            $('.class').hide();// class can be for multiple element
+        });
+
+        //There are three main type of selectors
+        //1. Element Selectors
+        //2. ID Selectors
+        //3. Class Selectors
+
+        //1. Element Selector - This is an example of Element Selector which clicks on all paragrph elemnet
+        $('p').click()
+        
+        //2. ID Selector
+        $('#524789').click()
+
+        //3. Class Selector
+        $('.Odd').click()
+
+        //Other Selectors
+        $('*').click() // it will click on all the elements
+
+        // if your want to click on paragraph whose class name is odd
+        $('p.Odd').click()
+
+        //if your want to click on first paragraph
+        $('p:first').click()
+
+
+
+
+
+    })
+
+
+
+
+</script>
+
+</html>
